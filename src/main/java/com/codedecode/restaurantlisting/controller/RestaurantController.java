@@ -41,7 +41,7 @@ public class RestaurantController {
 		return new ResponseEntity<>(restaurantDTOAdded, HttpStatus.CREATED);
 	}
 	
-	@GetMapping("fetchById/{id}")
+	@GetMapping("/fetchById/{id}")
 	public ResponseEntity<RestaurantDTO> findRestaurantById(@PathVariable int id){
 		Optional<RestaurantDTO> restaurantDTO = restaurantService.fetchRestaurantById(id);
 		if(restaurantDTO.isPresent()) {
