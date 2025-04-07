@@ -29,7 +29,7 @@ public class RestaurantService {
 		return restaurantDTOs ;
 	}
 
-	public RestaurantDTO addRestaurantInDD(RestaurantDTO restaurantDTO) {
+	public RestaurantDTO addRestaurantInDB(RestaurantDTO restaurantDTO) {
 		Restaurant restaurant = RestaurantMapper.INSTANCE.mapRestaurantDTOToRestaurant(restaurantDTO);
 		Restaurant restaurantAdded = restaurantRepo.save(restaurant);
 		RestaurantDTO restaurantDTOAdded = RestaurantMapper.INSTANCE.mapRestaurantToRestaurantDTO(restaurantAdded);

@@ -33,7 +33,7 @@ public class RestaurantController {
 	
 	@PostMapping("/addRestaurant")
 	public ResponseEntity<RestaurantDTO> saveRestaurant(@RequestBody RestaurantDTO restaurantDTO){
-		RestaurantDTO restaurantDTOAdded = restaurantService.addRestaurantInDD(restaurantDTO);
+		RestaurantDTO restaurantDTOAdded = restaurantService.addRestaurantInDB(restaurantDTO);
 		/*if(restaurantAdded!=null) {
 			return new ResponseEntity<>(restaurantDTO, HttpStatus.CREATED);
 		}*/
